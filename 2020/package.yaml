@@ -1,0 +1,98 @@
+name:                adventOfCode2020
+version:             0.1.0.0
+github:              "Kasama/adventOfCode2020"
+license:             MIT
+author:              "Roberto Alegro"
+maintainer:          "robertoaall@gmail.com"
+copyright:           "2020 Roberto Alegro"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/Kasama/adventOfCode2020#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- split
+- parsec
+- array
+- containers
+- sort
+- vector
+- arithmoi
+
+library:
+  source-dirs: src
+
+executables:
+  day1: &executable
+    main:                Main.hs
+    source-dirs: app/day1
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - adventOfCode2020
+  day2:
+    <<: *executable
+    source-dirs: app/day2
+  day3:
+    <<: *executable
+    source-dirs: app/day3
+  day4:
+    <<: *executable
+    source-dirs: app/day4
+  day5:
+    <<: *executable
+    source-dirs: app/day5
+  day6:
+    <<: *executable
+    source-dirs: app/day6
+  day7:
+    <<: *executable
+    source-dirs: app/day7
+  day8:
+    <<: *executable
+    source-dirs: app/day8
+  day9:
+    <<: *executable
+    source-dirs: app/day9
+  day10:
+    <<: *executable
+    source-dirs: app/day10
+  day11:
+    <<: *executable
+    source-dirs: app/day11
+  day12:
+    <<: *executable
+    source-dirs: app/day12
+  day13:
+    <<: *executable
+    source-dirs: app/day13
+  day14:
+    <<: *executable
+    source-dirs: app/day14
+  day15:
+    <<: *executable
+    source-dirs: app/day15
+  day16:
+    <<: *executable
+    source-dirs: app/day16
+  day17:
+    <<: *executable
+    source-dirs: app/day17
+  day18:
+    <<: *executable
+    source-dirs: app/day18
+  day19:
+    <<: *executable
+    source-dirs: app/day19

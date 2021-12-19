@@ -1,0 +1,52 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "adventOfCode2021:lib"
+
+    - path: "./app/day1/Main.hs"
+      component: "adventOfCode2021:exe:day1"
+
+    - path: "./app/day1/Paths_adventOfCode2021.hs"
+      component: "adventOfCode2021:exe:day1"
+
+    - path: "./app/day2/Main.hs"
+      component: "adventOfCode2021:exe:day2"
+
+    - path: "./app/day2/Paths_adventOfCode2021.hs"
+      component: "adventOfCode2021:exe:day2"
+
+    - path: "./app/day3/Main.hs"
+      component: "adventOfCode2021:exe:day3"
+
+    - path: "./app/day3/Paths_adventOfCode2021.hs"
+      component: "adventOfCode2021:exe:day3"
+
+    - path: "./app/day4/Main.hs"
+      component: "adventOfCode2021:exe:day4"
+
+    - path: "./app/day4/Paths_adventOfCode2021.hs"
+      component: "adventOfCode2021:exe:day4"
+
+    - path: "./app/day5/Main.hs"
+      component: "adventOfCode2021:exe:day5"
+
+    - path: "./app/day5/Paths_adventOfCode2021.hs"
+      component: "adventOfCode2021:exe:day5"
+
+    - path: "./app/day6/Main.hs"
+      component: "adventOfCode2021:exe:day6"
+
+    - path: "./app/day6/Paths_adventOfCode2021.hs"
+      component: "adventOfCode2021:exe:day6"
+
+    - path: "./app/day7/Main.hs"
+      component: "adventOfCode2021:exe:day7"
+
+    - path: "./app/day7/Paths_adventOfCode2021.hs"
+      component: "adventOfCode2021:exe:day7"
+
+    - path: "./app/day8/Main.hs"
+      component: "adventOfCode2021:exe:day8"
+
+    - path: "./app/day8/Paths_adventOfCode2021.hs"
+      component: "adventOfCode2021:exe:day8"

@@ -57,10 +57,7 @@ fn run_part2(input: &str) -> i64 {
 #[cfg(test)]
 mod test {
     use crate::{run_part1, run_part2};
-
-    #[test]
-    fn test_case1() {
-        let input = r#"1000
+    const INPUT: &str = r#"1000
 2000
 3000
 
@@ -76,27 +73,13 @@ mod test {
 10000
 "#;
 
-        assert_eq!(run_part1(input), 24000);
+    #[test]
+    fn test_case1() {
+        assert_eq!(run_part1(INPUT), 24000);
     }
 
     #[test]
     fn test_case2() {
-        let input = r#"1000
-2000
-3000
-
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000
-"#;
-
-        assert_eq!(run_part2(input), 45000);
+        assert_eq!(run_part2(INPUT), 45000);
     }
 }

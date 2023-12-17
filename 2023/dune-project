@@ -1,0 +1,26 @@
+(lang dune 3.9)
+
+(name advent_of_code)
+
+(generate_opam_files true)
+
+(source
+ (github Kasama/advent-of-code))
+
+(authors "Roberto Alegro")
+
+(maintainers "Roberto Alegro")
+
+(license MIT)
+
+(documentation https://url/to/documentation)
+
+(package
+ (name advent_of_code)
+ (synopsis "Advent of code 2023 solutions")
+ (description "")
+ (depends ocaml dune)
+ (tags
+  ("advent of code")))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project

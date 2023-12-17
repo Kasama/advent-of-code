@@ -63,8 +63,8 @@ let () =
   let input = Advent_of_code.Read.read_all () in
   let lines = String.split_on_char '\n' input in
   let p1 = part_1 lines in
-  let _ = part_2 lines in
+  let p2 = part_2 lines in
   print_string "Part 1: ";
-  print_endline (string_of_int p1)
-(* print_string "Part 2: "; *)
-(* print_endline (string_of_int p2) *)
+  print_endline (string_of_int p1);
+  print_string "Part 2: ";
+  print_endline (string_of_int p2)

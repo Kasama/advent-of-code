@@ -8,4 +8,4 @@
  (public_name day2)
  (name day2)
  (modules day2)
- (libraries advent_of_code core))
+ (libraries advent_of_code core angstrom))

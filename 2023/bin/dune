@@ -15,3 +15,9 @@
  (name day3)
  (modules day3)
  (libraries advent_of_code core angstrom))
+
+(executable
+ (public_name day4)
+ (name day4)
+ (modules day4)
+ (libraries advent_of_code core angstrom batteries))

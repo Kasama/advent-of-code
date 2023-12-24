@@ -1,12 +1,5 @@
 open Angstrom
-
-let is_whitespace c = match c with ' ' | '\t' -> true | _ -> false
-let whitespace = take_while is_whitespace
-let semicolon = char ';'
-let colon = char ':'
-let comma = char ','
-let is_digit c = match c with '0' .. '9' -> true | _ -> false
-let integer = take_while1 is_digit >>| int_of_string
+open Advent_of_code.Parse
 
 type color = Red | Blue | Green
 
@@ -78,11 +71,11 @@ let p1 games =
   let valid_games =
     List.filter_map
       (fun (game, content) ->
-        if is_counter_possible claimed_content content then Some game else None)
+        if is_counter_possible claimed_content content then Some game.number
+        else None)
       games_with_min_content
   in
-  let valid_games_ids = List.map (fun game -> game.number) valid_games in
-  List.fold_left ( + ) 0 valid_games_ids
+  List.fold_left ( + ) 0 valid_games
 
 let p2 games =
   let min_content = List.map min_cube_content games in
@@ -91,7 +84,6 @@ let p2 games =
 
 let () =
   let input = Advent_of_code.Read.read_all () in
-  let input = String.trim input in
   let parsed = parse_string ~consume:All games input in
   let _ =
     match parsed with

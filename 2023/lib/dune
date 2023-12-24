@@ -1,4 +1,4 @@
 (library
  (name advent_of_code)
- (modules Read)
- )
+ (modules Read Parse Util)
+ (libraries angstrom))

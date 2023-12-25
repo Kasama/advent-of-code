@@ -17,12 +17,11 @@ let card_number = string "Card" *> whitespace *> integer <* string ":"
 let string_of_card_number number = "Card " ^ string_of_int number ^ ": "
 
 let card =
-  map4
+  map3
     (card_number <* whitespace)
-    numbers
-    (whitespace *> string "|" <* whitespace)
+    (numbers <* whitespace <* string "|" <* whitespace)
     (numbers <* whitespace)
-    ~f:(fun n w _ h ->
+    ~f:(fun n w h ->
       { number = n; winning_numbers = w |> IntSet.of_list; numbers_we_have = h })
 
 let string_of_card card =
@@ -49,6 +48,7 @@ let p1 cards =
   List.fold_left ( + ) 0 points
 
 let p2 cards =
+  (* start with only one card of each *)
   let card_mapper = Array.init (List.length cards) (fun _ -> 1) in
   let total_cards =
     List.fold_left
@@ -57,9 +57,10 @@ let p2 cards =
         let card_index = card.number - 1 in
         let copies = Array.get mapper card_index in
         let _ =
-          Array.mapi_inplace
+          (* every time a card is checked, increase the number of copies of subsequent cards *)
+          Array.mapi_inplace (* inplace because its faster *)
             (fun i n ->
-              (* 2 after cardidx 2 .. 4*)
+              (* only copy the `correct_numbers` next cards *)
               if i <= card_index || i > card_index + correct_numbers then n
               else n + copies)
             mapper

@@ -21,3 +21,10 @@
  (name day4)
  (modules day4)
  (libraries advent_of_code core angstrom batteries))
+
+(executable
+ (public_name day5)
+ (name day5)
+ (modes byte exe)
+ (modules day5)
+ (libraries advent_of_code core angstrom batteries))

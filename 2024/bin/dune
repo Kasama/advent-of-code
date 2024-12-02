@@ -1,0 +1,5 @@
+(executable
+ (public_name day1)
+ (name day1)
+ (modules day1)
+ (libraries advent_of_code re core angstrom))
